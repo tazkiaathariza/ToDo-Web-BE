@@ -46,7 +46,3 @@ async userLogin(req,res) {
 }
 
 }
-
-module.exports = {
-    userLogin
-};

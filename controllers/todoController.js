@@ -44,6 +44,46 @@ async createTask(req,res) {
     }
 },
 
+// to get task
+
+async getTask(req,res) {
+    try {
+        const foreignKey = req.body.foreignKey
+        const userExist = await user.findOne({
+            where: {
+                id: foreignKey
+            }
+        });
+        if(userExist === false){
+            return res.status(400).json({
+                message: "error, need to log in first"
+            })
+        }
+        else{
+            const allTask = todo.findAll({
+                where: {
+                    foreignKey: id
+                }
+            })
+            allTask.then(function(result){
+                console.log(result)
+                return res.status(200).json({
+                    message:  "this is all the tasks you need to do",
+                    data: {
+                        taskData: result
+                    }
+                })
+            })
+        }
+    }
+    catch (error) {
+        return res.status(500).json({
+            message: "ERROR",
+            error: error,
+    });
+ }
+},
+
 // to delete task
 
 async deleteTask(req,res) {

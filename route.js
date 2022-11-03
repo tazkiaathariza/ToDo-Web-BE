@@ -8,9 +8,10 @@ const cors = require('cors');
 
 
 router.get("/", open.index);
-// router.post("/login", login.userLogin);
+router.post("/login", login.userLogin);
 // router.post("/task/create", todo.createTask);
-// router.delete("/task/delete/:todo_id", todo.deleteTask);
+// router.delete("/task/delete/:id_todo", todo.deleteTask);
+// router.get("/task/:id", todo.getTask);
 
 
 module.exports = router;

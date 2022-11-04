@@ -8,6 +8,8 @@ const cors = require('cors');
 
 
 router.get("/", open.index);
+
+// some code in controllers are still error and can't function well
 // router.post("/login", login.userLogin);
 // router.post("/task/create", todo.createTask);
 // router.delete("/task/delete/:id_todo", todo.deleteTask);

@@ -1,0 +1,18 @@
+1. Apakah Kegunaan JSON pada REST API?
+JAWAB : 
+JavaScript Object Notation atau JSON adalah format data yang berguna untuk transaksi
+data pada REST API sebagai bentuk request ataupun respon. JSON saat ini adalah salah satu 
+format standar transaksi data. Sebenarnya, bisa saja menggunakan XML pada REST API, tapi JSON lebih baik
+karena lebih mudah dibaca dan efisien. 
+
+2. Jelaskan bagaimana REST API bekerja
+JAWAB : 
+REST adalah salah satu gaya arsitektur yang juga merupakan API. Cara kerjanya adalah
+dengan menjembatani sistem client dan sistem server. REST API menggunakan protokol HTTP, jadi harus 
+menggunakan HTTP verbs untuk menentukan aksi (GET, PUT, GET, DELETE). Verbs tersebut umum digunakan 
+dalam operasi CRUD. Cara kerjanya dimulai oleh rest client melakukan request data ke server. Client 
+menghubungi server dengan menggunakan API pada endpoint tertentu. Kemudian, server akan mengautentikasi 
+client dan melakukan cek apakah client memiliki hak untuk membuat request. Selanjutnya, server akan mengembalikan 
+respon kepada client. Respon bisa jadi memberitahu client bahwa permintaannya berhasil ataupun gagal.
+Oleh karenanya saat membangun REST API, diperlukan response code yang benar (seperti 200, 500, dll. Tiap code 
+memiliki arti yang berbeda). 
